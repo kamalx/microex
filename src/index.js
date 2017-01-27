@@ -4,6 +4,7 @@ import App from './App'
 import Web3 from 'web3'
 
 import './index.css'
+import './bootstrap/dist/css/bootstrap.css'
 
 import truffleConfig from '../truffle.js'
 
