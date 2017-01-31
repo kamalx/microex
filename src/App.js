@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import './App.css'
+import './styles.css'
 
 import {Grid,Row,Col} from 'react-bootstrap'
 
-import Logo from 'components/Logo'
+import Logo from 'images/automte-white.svg'
+import EthereumAutomteLogo from 'images/ethereum-automte-logo.svg'
 import HowTo from 'components/HowTo'
 import BigAssEtherLogo from 'components/BigAssEtherLogo'
 import EtherToRs from 'components/EtherToRs'
@@ -15,28 +17,42 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <Grid>
-        <Row>
-          <Col sm={2} xs={2}>
-            <Logo />
-          </Col>
-        <Col sm={2} xs={2} xsOffset={3}>
-          <HowTo />
-        </Col>
-        <Col sm={2} xs={2} xsOffset={3}>
-          <VerifyAccountContainer web3={this.props.web3}/>
-        </Col>
-        </Row>
-        <Row>
-        <Col>
-          <MarketingMessage />
-        </Col>
-        <Col>
-          <BigAssEtherLogo />
-          <EtherToRs />
-        </Col>
-        </Row>
-        </Grid>
+        <header>
+          <Grid>
+            <Row>
+              <Col md={7}>
+                <img className="brand" src={Logo} alt="Automte logo" />
+              </Col>
+              <Col md={5}>
+                <div className="ethereum-wallet-id">
+                  <VerifyAccountContainer web3={this.props.web3}/>
+                </div>
+              </Col>
+            </Row>
+          </Grid>
+        </header>
+        <section>
+          <Grid>
+            <Row>
+              <Col md={8}>
+                <div className="usp">
+                  <MarketingMessage />
+                </div>
+                <div className="help-link">
+                  <HowTo />
+                </div>
+              </Col>
+              <Col md={4}>
+                <div className="ethereum-automte">
+                  <img src={EthereumAutomteLogo} alt=""/>
+                </div>
+                <div className="conversion-rate">
+                  <EtherToRs />
+                </div>
+              </Col>
+            </Row>
+          </Grid>
+        </section>
       </div>
     )
   }

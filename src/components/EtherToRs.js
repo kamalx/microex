@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-class EthereToRs extends Component {
+class EtherToRs extends Component {
   render () {
     return (
       <div className="EthereToRs">
-        EthereToRs
+        EtherToRs
       </div>
     )
   }
 }
 
-export default EthereToRs
+export default EtherToRs
