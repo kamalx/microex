@@ -4,7 +4,9 @@ class MarketingMessage extends Component {
   render () {
     return (
       <div className="MarketingMessage">
-        WE MAKE IT EASY TO BUY & SELL ETHER WITH INR
+        <span>We make it easy to</span>
+        <span>buy &amp; sell ether</span>
+        <span>with INR!</span>
       </div>
     )
   }
